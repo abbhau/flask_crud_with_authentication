@@ -1,0 +1,26 @@
+{% extends 'Base.html' %}
+
+{% block title %}
+<title>STUDENT FORM</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+<form method="post" >
+    <div class="mb-3">
+      <label for="A" class="form-label">ROLL NO </label>
+      <input type="number" class="form-control" id="A" name="roll" value="{{rec.roll}}">
+    </div>
+    <div class="mb-3">
+      <label for="b" class="form-label">NAME</label>
+      <input type="text" class="form-control" id="b" name="name" value="{{rec.name}}">
+    </div>
+    <div class="mb-3">
+        <label for="c" class="form-label">MARKS </label>
+        <input type="number" step="0.01" class="form-control" id="c" name="marks" value="{{rec.marks}}">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="rest" class="btn btn-warning">Reset</button>
+  </form>
+  </div>
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends 'Base.html'%}
+
+{% block title %}
+<title>STUDENT LIST</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ROLL</th>
+            <th scope="col">NAME</th>
+            <th scope="col">MARKS</th>
+            <TH scope="col">ACTION</TH>
+          </tr>
+        </thead>
+        <tbody>
+        {% for obj in rec %}
+          <tr>
+            <td>{{obj.roll}}</td>
+            <td>{{obj.name}}</td>
+            <td>{{obj.marks}}</td>
+            <td><a class="btn btn-outline-warning btn-sm" href="/up_stu/{{obj.id}}">UPDATE</a>
+            <a class="btn btn-outline-danger btn-sm" href="/del_student/{{obj.id}}">DELETE</a></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'Base.html' %}
+
+{% block title %}
+<title>REGISTER FORM</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+<form method="post" action="/signup">
+    <div class="mb-3">
+      <label for="A" class="form-label">USERNAME </label>
+      <input type="text" class="form-control" id="A" name="username">
+    </div>
+    <div class="mb-3">
+      <label for="b" class="form-label">PASSWORD</label>
+      <input type="password" class="form-control" id="b" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="rest" class="btn btn-warning">Reset</button>
+  </form>
+  </div>
+{% endblock content %}

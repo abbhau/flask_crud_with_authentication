@@ -1,0 +1,14 @@
+{% extends 'Base.html'%}
+
+{% block title %}
+<title>STUDENT LIST</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container text-center">
+    <form method="post">
+        <h4>Are u confirm to delete this record</h4>
+        <button class="btn btn-outline-danger btn-sm" type="submit">YES</button>
+        <a href="/show_student"><button class="btn btn-outline-warning btn-sm" type="button">NO</button></a>
+    </form>
+{% endblock content %}

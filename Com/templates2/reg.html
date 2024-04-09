@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>DB</title>
+    </head>
+    <body>
+        <div class="container">
+            <form method="POST" action="/add/user">
+                {{ form.hidden_tag() }}        
+                {{ form.username.label(for="username") }} {{ form.username(id="username",class="form-control") }}<br>
+                {% for error in form.username.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}<br><br>
+                {{ form.password.label(for="password")}} {{ form.password(id="password",class="form-control") }}<br>
+                {% for error in form.password.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}<br><br>
+                {{ form.city.label(for="city") }} {{ form.city(id="city",class="form-control") }}<br>
+                {% for error in form.city.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}<br><br>
+        
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="rest" class="btn btn-warning">Reset</button>
+          </form>
+          </div>
+    </body>
+</html>
+
+
